@@ -34,7 +34,7 @@ onMounted(() => {
 <template>
   <CContainer class="p-5 text-center">
     <h1>
-      관통프로젝트 발표까지
+      프로젝트 마감까지
       <br>({{ dateFormat }})
     </h1>
     <p class="display-1">
