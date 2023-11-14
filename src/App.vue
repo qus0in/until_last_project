@@ -17,7 +17,7 @@ const countDownHour = computed(() => {
   return Math.floor(dayjs(countDown.value) / 1000 / 3600)
 })
 const countDownTime = computed(() => {
-  return dayjs(countDown.value).format('mm:ss:SSS')
+  return dayjs(countDown.value).format('mm:ss')
 })
 
 onMounted(() => {
@@ -25,8 +25,8 @@ onMounted(() => {
   countDown.value = store.deadline.diff(dayjs(), 'ms')
   setInterval(() => {
     // console.log('count down')
-    countDown.value-=9
-  }, 9)
+    countDown.value-=1000
+  }, 1000)
 })
 
 </script>
@@ -49,17 +49,17 @@ onMounted(() => {
 <style scoped>
 /* 키 프레임 정의 */
 @keyframes randomMove {
-  0%   { transform: translate(-25%, 0px); }
+  0%   { transform: translate(-50%, 0px); }
   25%  { transform: translate(0px, 0px); }
-  50%  { transform: translate(25%, 0px); }
+  50%  { transform: translate(50%, 0px); }
   75%  { transform: translate(0px, 0px); }
-  100% { transform: translate(-25%, 0px); }
+  100% { transform: translate(-50%, 0px); }
 }
 
 /* img 태그에 애니메이션 적용 */
 img {
   animation-name: randomMove; /* 애니메이션 이름 지정 */
-  animation-duration: 3s; /* 애니메이션 지속 시간 */
+  animation-duration: 5s; /* 애니메이션 지속 시간 */
   animation-timing-function: linear; /* 일정한 속도 */
   animation-iteration-count: infinite; /* 무한 반복 */
 }
