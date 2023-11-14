@@ -41,7 +41,7 @@ onMounted(() => {
       {{ countDownHour }}:{{ countDownTime }}
     </p>
     <div>
-      <img src="handy-timer-runs-and-looks-at-the-wristwatch-1.png">
+      <img :src="'./handy-timer-runs-and-looks-at-the-wristwatch-1.png'">
     </div>
   </CContainer>
 </template>
