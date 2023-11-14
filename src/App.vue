@@ -10,7 +10,7 @@ dayjs.extend(utc)
 const store = useDeadlineStore()
 
 const dateFormat = computed(() => {
-  return (store.deadline.add(9, 'h')).format('YY-MM-DD HH:mm')
+  return (store.deadline).format('YY-MM-DD')
 })
 const countDown = ref(0)
 const countDownHour = computed(() => {
